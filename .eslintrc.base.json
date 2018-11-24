@@ -1,0 +1,65 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:import/errors",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "optionalDependencies": true }
+    ],
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-use-before-define": 0,
+    "arrow-body-style": 0,
+    "react/no-unused-prop-types": ["error"],
+    "dot-notation": 0,
+    "no-console": 0,
+    "react/jsx-key": 0,
+    "semi": 2,
+    "react/sort-comp": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "parser": "babylon"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "fetch": true,
+    "process": true,
+    "navigator": true,
+    "console": true,
+    "require": true,
+    "module": true,
+    "Promise": true,
+    "global": true,
+    "URL": true,
+    "window": true,
+    "document": true
+  },
+  "plugins": ["react", "json", "prettier"]
+}
